@@ -1,7 +1,7 @@
 {
   "name": "github-portfolio",
   "private": false,
-  "homepage": "https://benguinsan.github.io/github-portfolio",
+  "homepage": "https://benguinsan.github.io/github-portfolio/",
   "version": "0.0.0",
   "type": "module",
   "scripts":{
