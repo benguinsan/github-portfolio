@@ -1,6 +1,7 @@
 {
   "name": "github-portfolio",
   "private": false,
+  "homepage": ".",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
