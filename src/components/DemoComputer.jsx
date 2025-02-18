@@ -9,10 +9,10 @@ const DemoComputer = (props) => {
 
   const group = useRef()
 
-  const { nodes, materials, animations } = useGLTF('/models/computer.glb')
+  const { nodes, materials, animations } = useGLTF('models/computer.glb')
 
   // texture demo display
-  const txt = useTexture(props.texture ? props.texture: "/textures/project/project-img.png")
+  const txt = useTexture(props.texture ? props.texture: "textures/project/project-img.png")
 
   useEffect(() => {
     if (txt) {
@@ -1008,6 +1008,6 @@ const DemoComputer = (props) => {
   )
 }
 
-useGLTF.preload('/models/computer.glb')
+useGLTF.preload('models/computer.glb')
 
 export default DemoComputer;
