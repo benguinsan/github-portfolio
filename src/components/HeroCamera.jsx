@@ -8,7 +8,7 @@ const HeroCamera = ({children, isMobile}) => {
 
     useFrame((state, delta) => {
       // damp3 [position] => zoom in zoom out
-      easing.damp3(state.camera.position, [0, 0, 20], 0.25, delta);
+      easing.damp3(state.camera.position, [0, 0, 25], 0.25, delta);
 
       // dampE [rotation]
       if(!isMobile) {

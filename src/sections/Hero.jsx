@@ -1,21 +1,21 @@
 import { PerspectiveCamera } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
-import HackerRoom from "../components/HackerRoom"
 import { Suspense } from "react"
 import CanvasLoader from "../components/CanvasLoader"
 // import { Leva, useControls } from "leva"
 import { useMediaQuery } from "react-responsive"
 import { calculateSizes } from "../constants"
-import Target from "../components/Target"
 import ReactLogo from "../components/ReactLogo"
-import Cube from "../components/Cube"
-import Rings from "../components/Rings"
 import HeroCamera from "../components/HeroCamera"
 import Button from "../components/Button"
+import Zaku_ii from "../components/Zaku_ii"
+import { Leva, useControls } from "leva"
+import Stylized_Planet from "../components/Stylized_Planet"
+
 
 const Hero = () => {
   // just import leva and controls when want to modify s, p, r on ui
-  // const controls = useControls('HackerRoom',{
+  // const controls = useControls('Zaku_ii',{
   //   positionX: {
   //     value: 2.5,
   //     min: -10,
@@ -64,17 +64,18 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen w-full flex flex-col relative">
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-        <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
+      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3 z-10">
+        <p className="sm:text-3xl text-xl font-medium text-white text-left font-generalsans">
           Hi, I am Phuc <span className="waving-hand">👋</span>
         </p>
-        <p className="hero_tag text-gray_gradient">Building Products & Brands</p>
+        <p className="hero_tag text-gray_gradient">FullStack Developer</p>
+        <p className="sm:text-2xl text-lg font-medium text-white-600 text-left font-generalsans">mrben1113@gmail.com</p>
       </div>
 
       {/* Scene for threejs (3d object) */}
       <div className="w-full h-full absolute inset-0">
         {/* Leva Controller */}
-        {/* <Leva/> */}
+        {/* <Leva /> */}
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader/>}>
 
@@ -83,28 +84,23 @@ const Hero = () => {
 
             {/* Model (Object) */}
             <HeroCamera isMobile = {isMobile}>
-              <HackerRoom 
-                scale={sizes.deskScale} 
-                position={sizes.deskPosition}  
-                rotation={[0, -Math.PI, 0]}
+              <Zaku_ii
+                scale={sizes.zakuScale} 
+                position={sizes.zakuPosition}  
+                rotation={[0, 2.5, 0]}
               />
             </HeroCamera>
 
             {/* Group float elements */}
             <group>
-              <Target 
-                position={sizes.targetPosition} 
-              />
               <ReactLogo 
                 position={sizes.reactLogoPosition}
               />
-              <Cube
-                position={sizes.cubePosition}
+              <Stylized_Planet
+                scale={sizes.stylized_planetScale}
+                position={sizes.stylized_planetPosition}
               />
-              <Rings
-                position={sizes.ringPosition}
-              />
-            </group>
+            </group>  
 
             {/* Light */}
             <ambientLight intensity={1}/>

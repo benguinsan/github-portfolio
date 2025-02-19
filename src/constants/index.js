@@ -25,17 +25,44 @@ export const navLinks = [
   export const myProjects = [
     {
       title: 'Prescripto Clone - Health Management System',
+      href: 'https://github.com/tthanhvu002sgu/bookingcare-fe',
       desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
-      subdesc:
-        'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-      texture: '/textures/project/project-img.png',
       logo: '/assets/logo.svg',
       logoStyle: {
         backgroundColor: '#f0f0f0',
         border: '0.2px solid #17293E',
         boxShadow: '0px 0px 60px 0px #2F6DB54D',
       },
-      spotlight: 'assets/spotlight2.png',
+      spotlight: '/assets/spotlight3.png',
+      tags: [
+        {
+          id: 1,
+          name: 'React.js',
+          path: 'assets/react.svg',
+        },
+        {
+          id: 2,
+          name: 'TailwindCSS',
+          path: 'assets/tailwindcss.png',
+        },
+        {
+          id: 3,
+          name: 'TypeScript',
+          path: 'assets/typescript.png',
+        },
+      ],
+    },
+    {
+      title: 'Ninstargram',
+      href: 'https://github.com/vihao1802/Social-Media-Client',
+      desc: 'Whether it \'s a stunning sunset, a delicious meal, or a candid selfie, InstaSnap lets you connect with friends, family, and the world through photos, videos, and stories.',
+      logo: 'assets/instagram.svg',
+      logoStyle: {
+        backgroundColor: '#000000',
+        border: '0.2px solid #17293E',
+        boxShadow: '0px 0px 60px 0px #2F6DB54D',
+      },
+      spotlight: '/assets/spotlight5.png',
       tags: [
         {
           id: 1,
@@ -58,12 +85,11 @@ export const navLinks = [
   
   export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
-      deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
-      deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -6.5, 0],
-      cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
-      reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
-      ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
-      targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
+      zakuScale: isSmall ? 3 : isMobile ? 3.3 : 4.0,
+      stylized_planetScale: isSmall ? 3 : isMobile ? 3 : 6,
+      zakuPosition: isMobile ? [2, -9, 8] : [5, -9, 8],
+      reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 6, 0] : isTablet ? [5, 4, 0] : [-7, 4, 0],
+      stylized_planetPosition: isMobile ? [-5, 0, 0] : isTablet ? [-5, 0, 0] : [-13, -4, 0],
     };
   };
 
