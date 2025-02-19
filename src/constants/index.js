@@ -27,13 +27,13 @@ export const navLinks = [
       title: 'Prescripto Clone - Health Management System',
       href: 'https://github.com/tthanhvu002sgu/bookingcare-fe',
       desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
-      logo: '/assets/logo.svg',
+      logo: 'assets/logo.svg',
       logoStyle: {
         backgroundColor: '#f0f0f0',
         border: '0.2px solid #17293E',
         boxShadow: '0px 0px 60px 0px #2F6DB54D',
       },
-      spotlight: '/assets/spotlight3.png',
+      spotlight: 'assets/spotlight3.png',
       tags: [
         {
           id: 1,
@@ -62,7 +62,7 @@ export const navLinks = [
         border: '0.2px solid #17293E',
         boxShadow: '0px 0px 60px 0px #2F6DB54D',
       },
-      spotlight: '/assets/spotlight5.png',
+      spotlight: 'assets/spotlight5.png',
       tags: [
         {
           id: 1,
