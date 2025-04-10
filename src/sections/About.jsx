@@ -8,7 +8,7 @@ const About = () => {
             {/* Base Infor */}
             <div className="col-span-1 xl:row-span-3">
               <div className="grid-container">
-                <img src="assets/avatar.jpg" alt="avatar" className="w-full sm:h-[276px] h-fit object-cover rounded-lg"/>
+                <img src="/assets/avatar.jpg" alt="avatar" className="w-full sm:h-[276px] h-fit object-cover rounded-lg"/>
                 <div className="">
                   <p className="grid-headtext">Hi, I'm Nguyen Thanh Phuc</p>
                   <p className="grid-subtext">I am a fourth-year Software Engineering student at Saigon University in Vietnam. From frontend to backend, I thrive on solving complex problems with clean, efficient code. My expertise spans React, Next.js and I'm always eager to learn more. </p>
@@ -36,19 +36,13 @@ const About = () => {
                       <h1 className="grid-headtext">Frontend</h1>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                      <div className="bg-purple-600 h-2.5 rounded-full w-[85%]"></div>
+                      <div className="bg-purple-600 h-2.5 rounded-full w-[75%]"></div>
                     </div>
                     <div className="flex justify-between">
                       <h1 className="grid-headtext">Backend</h1>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                       <div className="bg-blue-600 h-2.5 rounded-full w-[60%]"></div>
-                    </div>
-                    <div className="flex justify-between">
-                      <h1 className="grid-headtext">Programing</h1>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                      <div className="bg-indigo-600 h-2.5 rounded-full w-[50%]"></div>
                     </div>
                 </div>
     
