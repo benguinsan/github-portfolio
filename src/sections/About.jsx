@@ -8,7 +8,7 @@ const About = () => {
             {/* Base Infor */}
             <div className="col-span-1 xl:row-span-3">
               <div className="grid-container">
-                <img src="/assets/avatar.jpg" alt="avatar" className="w-full sm:h-[276px] h-fit object-cover rounded-lg"/>
+                <img src="assets/avatar.jpg" alt="avatar" className="w-full sm:h-[276px] h-fit object-cover rounded-lg"/>
                 <div className="">
                   <p className="grid-headtext">Hi, I'm Nguyen Thanh Phuc</p>
                   <p className="grid-subtext">I am a fourth-year Software Engineering student at Saigon University in Vietnam. From frontend to backend, I thrive on solving complex problems with clean, efficient code. My expertise spans React, Next.js and I'm always eager to learn more. </p>

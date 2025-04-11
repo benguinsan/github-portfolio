@@ -49,7 +49,7 @@ export const myProjects = [
     title: "Carhub",
     href: "https://github.com/benguinsan/CarShowClone",
     desc: "A sleek car showcase platform that allows users to browse, filter, and explore various luxury and sports cars. The website provides detailed specifications, high-quality images, and an intuitive interface for car enthusiasts to discover their dream vehicles.",
-    logo: "/assets/carhub.svg",
+    logo: "assets/carhub.svg",
     logoStyle: {
       backgroundColor: "#ffffff",
       border: "0.2px solid #17293E",
