@@ -22,17 +22,9 @@ const Contact = () => {
 
     setLoading(true);
 
-    // Lấy giá trị từ form
-    const formData = {
-      from_name: form.current.name.value,
-      from_email: form.current.email.value,
-      message: form.current.message.value,
-      subject: `Contact from: ${form.current.email.value}`, // Email hiển thị trong subject
-    };
-
-    // Sử dụng send() thay vì sendForm() để có control tốt hơn về template params
+    // sendForm nhận: serviceId, templateId, form element hoặc formData, publicKey
     emailjs
-      .send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then((result) => {
         console.log(result.text);
         toast.success('Thank you! Your message has been sent successfully.');

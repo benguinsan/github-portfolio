@@ -11,7 +11,10 @@ const About = () => {
                 <img src="assets/avatar.jpg" alt="avatar" className="w-full sm:h-[276px] h-fit object-cover rounded-lg"/>
                 <div className="">
                   <p className="grid-headtext">Hi, I'm Nguyen Thanh Phuc</p>
-                  <p className="grid-subtext">I am a fourth-year Software Engineering student at Saigon University in Vietnam. From frontend to backend, I thrive on solving complex problems with clean, efficient code. My expertise spans React, Next.js and I'm always eager to learn more. </p>
+                  <p className="grid-subtext">Final-year Software Engineering student passionate about Full-Stack Development. Experienced in ReactJs and its ecosy-
+stem, good at frontend programming languages such as Typescript/Javascript. Basic back-end experience using Node.js,
+Spring Boot and .NET. Familiar with SQL databases through academic projects. Able to adapt to new technologies and
+environments quickly, able to work independently productively.</p>
                 </div>
               </div>
             </div>
