@@ -1,10 +1,9 @@
 import { useRef, useState } from "react"
 import emailjs from '@emailjs/browser';
-
+import { toast } from 'react-toastify';
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState({ type: '', text: '' });
 
   const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -17,33 +16,23 @@ const Contact = () => {
     
     // Validate environment variables
     if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
-      setMessage({ 
-        type: 'error', 
-        text: 'Email service is not configured. Please check environment variables.' 
-      });
+      toast.error('Email service is not configured. Please check environment variables.');
       return;
     }
 
     setLoading(true);
-    setMessage({ type: '', text: '' });
 
     // sendForm nhận: serviceId, templateId, form element hoặc formData, publicKey
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then((result) => {
         console.log(result.text);
-        setMessage({ 
-          type: 'success', 
-          text: 'Thank you! Your message has been sent successfully.' 
-        });
+        toast.success('Thank you! Your message has been sent successfully.');
         // Reset form sau khi gửi thành công
         form.current.reset();
       }, (error) => {
         console.log(error.text);
-        setMessage({ 
-          type: 'error', 
-          text: 'Failed to send message. Please try again later.' 
-        });
+        toast.error('Failed to send message. Please try again later.');
       })
       .finally(() => {
         setLoading(false);
@@ -103,19 +92,6 @@ const Contact = () => {
               {loading ? 'Sending...' : 'Send message'}
             </button>
           </form>
-
-          {/* Success/Error Message */}
-          {message.text && (
-            <div 
-              className={`mt-4 p-4 rounded-lg ${
-                message.type === 'success' 
-                  ? 'bg-green-500/20 text-green-400 border border-green-500/50' 
-                  : 'bg-red-500/20 text-red-400 border border-red-500/50'
-              }`}
-            >
-              {message.text}
-            </div>
-          )}
         </div>
       </div>
     </section>
