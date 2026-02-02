@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-5 mx-auto c-space">
           
           <a href="/" className="text-neutral-400 font-bold text-xl hover:text-white transition-colors">
-            Thanh Phuc
+            Phuc Nguyen
           </a>
 
           <button onClick={toggleMenu} className="text-neutral-400 hover:text-white focus:outline-none sm:hidden" aria-label="Toggle menu">
